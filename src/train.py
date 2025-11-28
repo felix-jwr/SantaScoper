@@ -1,5 +1,4 @@
 import argparse
-import albumentations as A
 from ultralytics import YOLO
 
 
