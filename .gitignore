@@ -215,3 +215,6 @@ dataset/VisDrone2019-DET-train.zip
 dataset/VisDrone2019-DET-val.zip
 dataset/VisDrone2019-DET-test-dev.zip
 yolo11n.pt
+dataset/windowsxpgrassland.jpg
+dataset/windowsxpgrassland_wsanta.jpg
+demo_images/
