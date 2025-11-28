@@ -1,4 +1,4 @@
-# SantaDetector 🎅
+# SantaScoper 🎅
 Simple dockerised demo for training and testing YOLOv11 models on VisDrone2019, with additional scripts for manual augmentation of images (randomly add Santa into VisDrone images).
 
 Uses (mostly) default Ultralytics configurations for ease.
