@@ -39,6 +39,9 @@ def visdrone2yolo(dir, split, source_name=None):
         (labels_dir / f.name).write_text("".join(lines), encoding="utf-8")
 
 
+# Convert
 dir = Path("")
-visdrone2yolo(dir, "val", "VisDrone2019-DET-val")  # convert VisDrone annotations to YOLO labels
-shutil.rmtree(dir / "VisDrone2019-DET-val")  # cleanup original directory
+splits = {"VisDrone2019-DET-train": "train", "VisDrone2019-DET-val": "val", "VisDrone2019-DET-test-dev": "test"}
+for folder, split in splits.items():
+    visdrone2yolo(dir, split, folder)  # convert VisDrone annotations to YOLO labels
+    shutil.rmtree(dir / folder)  # cleanup original directory
