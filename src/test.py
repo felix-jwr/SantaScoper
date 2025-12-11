@@ -1,4 +1,5 @@
 from ultralytics import YOLO
+from get_eta import get_eta
 
 if __name__ == "__main__":
     print(f"Testing SantaScoper(tm)...\n" + "=" * 50 + "\n")
@@ -10,4 +11,6 @@ if __name__ == "__main__":
     # preds = model("dataset/windowsxpgrassland_wsanta.jpg")
 
     for idx, pred in enumerate(preds):
-        pred.save(filename=f"pred_{idx}.jpg")
+        pth = f"out/pred_{idx}.jpg"
+        pred.save(filename=pth)
+        get_eta(img_path=pth)
